@@ -1,0 +1,811 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>print(</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#CE9178'>&quot;thanks for https://hackr.io/ for game code&quot;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#CE9178'>'''</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#CE9178'>Tic Tac Toe</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#CE9178'>-------------------------------------------------------------</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#CE9178'>'''</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#569CD6'>import</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'> random</span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt;line-height:14.25pt;background:
+#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#569CD6'>class</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'> TicTacToe:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp;</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#569CD6'>def</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#D4D4D4'> __init__(self):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>self</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'>.board = []</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp;</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#569CD6'>def</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#D4D4D4'> create_board(self):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>for</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> i </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>in</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> range(</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#B5CEA8'>3</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'>):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;row = []</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>for</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> j </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>in</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> range(</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#B5CEA8'>3</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;row.append(</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#CE9178'>'-'</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>self</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>.board.append(row)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp;</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#569CD6'>def</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#D4D4D4'> get_random_first_player(self):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>return</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> random.randint(</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#B5CEA8'>0</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>, </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#B5CEA8'>1</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp;</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#569CD6'>def</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#D4D4D4'> fix_spot(self, row, col, player):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>self</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'>.board[row][col] = player</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp;</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#569CD6'>def</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#D4D4D4'> has_player_won(self, player):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;n = len(</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>self</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>.board)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;board_values = set()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#6A9955'># check rows</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>for</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> i </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>in</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> range(n):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>for</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> j </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>in</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> range(n):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;board_values.add(</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#569CD6'>self</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>.board[i][j])</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>if</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> board_values ==
+{player}:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>return</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>True</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>else</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;board_values.clear()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#6A9955'># check cols</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>for</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> i </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>in</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> range(n):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>for</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> j </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>in</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> range(n):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;board_values.add(</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#569CD6'>self</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>.board[j][i])</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>if</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> board_values ==
+{player}:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>return</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>True</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>else</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;board_values.clear()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#6A9955'># check diagonals</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>for</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> i </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>in</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> range(n):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;board_values.add(</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>self</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>.board[i][i])</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>if</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> board_values == {player}:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>return</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>True</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>else</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'>:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;board_values.clear()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;board_values.add(</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>self</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>.board[</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#B5CEA8'>0</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>][</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#B5CEA8'>2</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>])</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;board_values.add(</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>self</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>.board[</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#B5CEA8'>1</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>][</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#B5CEA8'>1</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>])</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;board_values.add(</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>self</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>.board[</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#B5CEA8'>2</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>][</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#B5CEA8'>0</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>])</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>if</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> board_values == {player}:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>return</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>True</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>else</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'>:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>return</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>False</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp;</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#569CD6'>def</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#D4D4D4'> is_board_filled(self):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>for</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> row </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>in</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>self</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'>.board:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>for</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> item </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>in</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> row:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>if</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> item == </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#CE9178'>'-'</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>return</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>False</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>return</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>True</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp;</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#569CD6'>def</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#D4D4D4'> swap_player_turn(self, player):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>return</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#CE9178'>'X'</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>if</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> player == </span><span style='font-size:
+10.5pt;font-family:Consolas;color:#CE9178'>'O'</span><span style='font-size:
+10.5pt;font-family:Consolas;color:#D4D4D4'> </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>else</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#CE9178'>'O'</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp;</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#569CD6'>def</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#D4D4D4'> show_board(self):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>for</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> row </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>in</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>self</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'>.board:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>for</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> item </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>in</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> row:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;print(item, end=</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#CE9178'>' '</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp;</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#569CD6'>def</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#D4D4D4'> start(self):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>self</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'>.create_board()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;player = </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#CE9178'>'X'</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>if</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>self</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>.get_random_first_player()
+== </span><span style='font-size:10.5pt;font-family:Consolas;color:#B5CEA8'>1</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>else</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#CE9178'>'O'</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;game_over = </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>False</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>while</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> </span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>not</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'> game_over:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>try</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>self</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>.show_board()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print(</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>f</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#CE9178'>'</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>\n</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#CE9178'>Player </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>{player}</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#CE9178'> turn'</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;row, col
+= list(</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;map(int, input(</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#CE9178'>'Enter row &amp; column numbers to fix spot: '</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>).split()))</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>if</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> col </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>is</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>None</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>raise</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> ValueError(</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#CE9178'>'not enough values to unpack (expected 2, got 1)'</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>self</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>.fix_spot(row - </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#B5CEA8'>1</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>, col - </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#B5CEA8'>1</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>, player)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;game_over
+= </span><span style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>self</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>.has_player_won(player)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>if</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> game_over:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;print(</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#569CD6'>f</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#CE9178'>'Player </span><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>{player}</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#CE9178'> wins the game!'</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#D4D4D4'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>continue</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;game_over
+= </span><span style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>self</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>.is_board_filled()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>if</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> game_over:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;print(</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#CE9178'>'Match Draw!'</span><span style='font-size:10.5pt;font-family:
+Consolas;color:#D4D4D4'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>continue</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;player = </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>self</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>.swap_player_turn(player)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>except</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> ValueError </span><span
+style='font-size:10.5pt;font-family:Consolas;color:#569CD6'>as</span><span
+style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'> err:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;print(err)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;print()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; &nbsp; &nbsp; &nbsp;</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#569CD6'>self</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'>.show_board()</span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt;line-height:14.25pt;background:
+#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;color:#D4D4D4'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#569CD6'>if</span><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'> __name__ == </span><span style='font-size:10.5pt;font-family:
+Consolas;color:#CE9178'>'__main__'</span><span style='font-size:10.5pt;
+font-family:Consolas;color:#D4D4D4'>:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; tic_tac_toe = TicTacToe()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+color:#D4D4D4'>&nbsp; tic_tac_toe.start()</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

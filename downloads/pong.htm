@@ -1,0 +1,1055 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:12.0pt;line-height:normal;background:
+#2B2B2B'><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#screen<br>
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>import
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>turtle<br>
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>import
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>time<br>
+style = </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#8888C6'>input</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;what mode do you want {dark_mode}   {light_mode}&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+<br>
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>if
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>style
+== </span><span style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;dark_mode&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>:<br>
+    wn = turtle.Screen()<br>
+    wn.title(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;pong game made by adam ahmed&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+    wn.bgcolor(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;black&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    wn.setup(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#AA4926'>width</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>=</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>800</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#AA4926'>height</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>=</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>600</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    wn.tracer(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#paddle_a<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>paddle_a
+=turtle.Turtle()<br>
+    paddle_a.speed(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    paddle_a.shape(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;square&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    paddle_a.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;white&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    paddle_a.shapesize(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#AA4926'>stretch_wid</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>=</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>5</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#AA4926'>stretch_len</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>=</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>1</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    paddle_a.penup()<br>
+    paddle_a.goto(-</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>350</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#paddle_b<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>paddle_b
+=turtle.Turtle()<br>
+    paddle_b.speed(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    paddle_b.shape(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;square&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    paddle_b.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;white&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    paddle_b.shapesize(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#AA4926'>stretch_wid</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>=</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>5</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#AA4926'>stretch_len</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>=</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>1</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    paddle_b.penup()<br>
+    paddle_b.goto(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>350</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#ball<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>ball
+=turtle.Turtle()<br>
+    ball.speed(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    ball.shape(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;circle&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    ball.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;white&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    ball.penup()<br>
+    ball.goto(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    ball.dx = </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0.2<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>ball.dy
+= </span><span style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>0.2<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#score<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>pen
+= turtle.Turtle()<br>
+    pen.speed(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    pen.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;white&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    pen.hideturtle()<br>
+    pen.penup()<br>
+    pen.goto(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>260</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    pen.write(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;Player A:0  Player B:0&quot;</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#CC7832'>,</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#AA4926'>align</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;center&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>,</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>font</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=(</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;Courier&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>,</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>24</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>,</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;normal&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>))<br>
+    score_a = </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>score_b
+= </span><span style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>0<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#functions<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>def
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#FFC66D'>paddle_a_up</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>():<br>
+        y = paddle_a.ycor()<br>
+        y +=</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>20<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_a.sety(y)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>def
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#FFC66D'>paddle_a_down</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>():<br>
+        y = paddle_a.ycor()<br>
+        y -=</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>20<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_a.sety(y)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>def
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#FFC66D'>paddle_b_up</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>():<br>
+        y = paddle_b.ycor()<br>
+        y +=</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>20<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_b.sety(y)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>def
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#FFC66D'>paddle_b_down</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>():<br>
+        y = paddle_b.ycor()<br>
+        y -=</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>20<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_b.sety(y)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#keybord_binds<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>wn.listen()<br>
+    wn.onkeypress(paddle_a_up</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6A8759'>&quot;w&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    wn.onkeypress(paddle_a_down</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6A8759'>&quot;s&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    wn.onkeypress(paddle_b_up</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6A8759'>&quot;Up&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    wn.onkeypress(paddle_b_down</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6A8759'>&quot;Down&quot;</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#game
+loop<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>time.sleep(</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>0.5</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>while
+True</span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>:<br>
+        wn.update()<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:gray'>#ball_movement<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.setx(ball.xcor() + ball.dx)<br>
+        ball.sety(ball.ycor() + ball.dy)<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:gray'>#borders<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.ycor() &gt; </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>290</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+            ball.sety(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>290</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+            ball.dy *= -</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>1<br>
+<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.ycor() &lt; -</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>290</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+            ball.sety(-</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>290</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+            ball.dy *= -</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>1<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.xcor() &gt; </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>390</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+                ball.goto(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>)<br>
+                ball.dx *= -</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>1<br>
+                </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>score_a += </span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>1<br>
+                </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>pen.clear()<br>
+                pen.write(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6A8759'>&quot;Player A:{}  Player B:{}&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>.format(score_a</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>score_b)</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>align</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;center&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>,</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>font</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=(</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;Courier&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>24</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;normal&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>))<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_a.ycor() &gt; </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+            paddle_a.sety(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_a.ycor() &lt; -</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+            paddle_a.sety(-</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_b.ycor() &gt; </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+            paddle_b.sety(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_b.ycor() &lt; -</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+            paddle_b.sety(-</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.xcor() &lt; -</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>390</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+                ball.goto(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>)<br>
+                ball.dx *= -</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>1<br>
+                </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>score_b += </span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>1<br>
+                </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>pen.clear()<br>
+                pen.write(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6A8759'>&quot;Player A:{}  Player B:{}&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>.format(score_a</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>,</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>score_b)</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>align</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;center&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>font</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=(</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;Courier&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>24</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;normal&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>))<br>
+<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:gray'>#collisions<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>(ball.xcor() &gt; </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>340 </span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#CC7832'>and </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>ball.xcor()
+&lt; </span><span style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>350</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>) </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>and </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>ball.ycor()
+&lt; paddle_b.ycor() + </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>40 </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>and </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.ycor() &gt; paddle_b.ycor() + -</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>40</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>:<br>
+            ball.setx(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>340</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+            ball.dx *= -</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>1<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>(ball.xcor() &lt; -</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>340 </span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#CC7832'>and </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>ball.xcor()
+&lt; -</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>350</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>) </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>and </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.ycor() &lt; paddle_a.ycor() + </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>40 </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>and </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>ball.ycor()
+&gt; paddle_a.ycor() + -</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>40</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>:<br>
+            ball.setx(-</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>340</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+            ball.dx *= -</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>1<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>score_a == </span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>10</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>:<br>
+            paddle_a.clear()<br>
+            paddle_a.goto(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>11110</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#CC7832'>, </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>111110</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+            paddle_b.clear()<br>
+            paddle_b.goto(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>111110</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#CC7832'>, </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>111110</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+            ball.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;black&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+            ball.goto(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>111110</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>, </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>111110</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+            pen.clear()<br>
+            end = turtle.Turtle()<br>
+            pen.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;black&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+            pen.hideturtle()<br>
+            pen.penup()<br>
+            end.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;red&quot;</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>)<br>
+            pen.hideturtle()<br>
+            pen.penup()<br>
+            end.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;red&quot;</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>)<br>
+            end.write(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;player A wins 10 points&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>align</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;center&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>font</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=(</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;Courier&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>,</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>35 </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;normal&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>))<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>score_b == </span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>10</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>:<br>
+            paddle_a.clear()<br>
+            paddle_a.goto(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>1111110</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>1111110</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+            paddle_b.clear()<br>
+            paddle_b.goto(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>1111110</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>1111110</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+            ball.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;black&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+            ball.goto(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>1111110</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>111110</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+            pen.color()<br>
+            end = turtle.Turtle()<br>
+            pen.hideturtle()<br>
+            pen.penup()<br>
+            end.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;red&quot;</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>)<br>
+            pen.hideturtle()<br>
+            pen.penup()<br>
+            end.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;red&quot;</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>)<br>
+            end.write(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;player b wins 10 points&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>align</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;center&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>font</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=(</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;Courier&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>35</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;normal&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>))<br>
+<br>
+<br>
+<br>
+<br>
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>if
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>style
+== </span><span style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;light_mode&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>:<br>
+    wn = turtle.Screen()<br>
+    wn.title(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;pong game made by adam ahmed&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+    wn.bgcolor(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;white&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    wn.setup(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#AA4926'>width</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>=</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>800</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#AA4926'>height</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>=</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>600</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    wn.tracer(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#paddle_a<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>paddle_a
+=turtle.Turtle()<br>
+    paddle_a.speed(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    paddle_a.shape(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;square&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    paddle_a.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;black&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    paddle_a.shapesize(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#AA4926'>stretch_wid</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>=</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>5</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#AA4926'>stretch_len</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>=</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>1</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    paddle_a.penup()<br>
+    paddle_a.goto(-</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>350</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#paddle_b<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>paddle_b
+=turtle.Turtle()<br>
+    paddle_b.speed(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    paddle_b.shape(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;square&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    paddle_b.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;black&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    paddle_b.shapesize(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#AA4926'>stretch_wid</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>=</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>5</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#AA4926'>stretch_len</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>=</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>1</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    paddle_b.penup()<br>
+    paddle_b.goto(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>350</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#ball<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>ball
+=turtle.Turtle()<br>
+    ball.speed(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    ball.shape(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;circle&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    ball.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;black&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    ball.penup()<br>
+    ball.goto(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    ball.dx = </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0.2<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>ball.dy
+= </span><span style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>0.2<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#score<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>pen
+= turtle.Turtle()<br>
+    pen.speed(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    pen.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;black&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    pen.hideturtle()<br>
+    pen.penup()<br>
+    pen.goto(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>260</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+    pen.write(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;Player A:0  Player B:0&quot;</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#CC7832'>,</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#AA4926'>align</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;center&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>,</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>font</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=(</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;Courier&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>,</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>24</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>,</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;normal&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>))<br>
+    score_a = </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>score_b
+= </span><span style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>0<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#functions<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>def
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#FFC66D'>paddle_a_up</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>():<br>
+        y = paddle_a.ycor()<br>
+        y +=</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>20<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_a.sety(y)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>def
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#FFC66D'>paddle_a_down</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>():<br>
+        y = paddle_a.ycor()<br>
+        y -=</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>20<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_a.sety(y)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>def
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#FFC66D'>paddle_b_up</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>():<br>
+        y = paddle_b.ycor()<br>
+        y +=</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>20<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_b.sety(y)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>def
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#FFC66D'>paddle_b_down</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>():<br>
+        y = paddle_b.ycor()<br>
+        y -=</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>20<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_b.sety(y)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#keybord_binds<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>wn.listen()<br>
+    wn.onkeypress(paddle_a_up</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6A8759'>&quot;w&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    wn.onkeypress(paddle_a_down</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6A8759'>&quot;s&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    wn.onkeypress(paddle_b_up</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6A8759'>&quot;Up&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+    wn.onkeypress(paddle_b_down</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6A8759'>&quot;Down&quot;</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:gray'>#game
+loop<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>time.sleep(</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>0.5</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+    </span><span style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>while
+True</span><span style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>:<br>
+        wn.update()<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:gray'>#ball_movement<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.setx(ball.xcor() + ball.dx)<br>
+        ball.sety(ball.ycor() + ball.dy)<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:gray'>#borders<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.ycor() &gt; </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>290</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+            ball.sety(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>290</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+            ball.dy *= -</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>1<br>
+<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.ycor() &lt; -</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>290</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+            ball.sety(-</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>290</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+            ball.dy *= -</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>1<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.xcor() &gt; </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>390</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+                ball.goto(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>)<br>
+                ball.dx *= -</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>1<br>
+                </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>score_a += </span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>1<br>
+                </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>pen.clear()<br>
+                pen.write(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6A8759'>&quot;Player A:{}  Player B:{}&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>.format(score_a</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>score_b)</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>align</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;center&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>,</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>font</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=(</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;Courier&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>24</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;normal&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>))<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_a.ycor() &gt; </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+            paddle_a.sety(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_a.ycor() &lt; -</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+            paddle_a.sety(-</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_b.ycor() &gt; </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+            paddle_b.sety(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>paddle_b.ycor() &lt; -</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+            paddle_b.sety(-</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>240</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.xcor() &lt; -</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>390</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>:<br>
+                ball.goto(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>)<br>
+                ball.dx *= -</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>1<br>
+                </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>score_b += </span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>1<br>
+                </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>pen.clear()<br>
+                pen.write(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6A8759'>&quot;Player A:{}  Player B:{}&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>.format(score_a</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>,</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>score_b)</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>align</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;center&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>font</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=(</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;Courier&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>24</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;normal&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>))<br>
+<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:gray'>#collisions<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>(ball.xcor() &gt; </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>340 </span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#CC7832'>and </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>ball.xcor()
+&lt; </span><span style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>350</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>) </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>and </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>ball.ycor()
+&lt; paddle_b.ycor() + </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>40 </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>and </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.ycor() &gt; paddle_b.ycor() + -</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>40</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>:<br>
+            ball.setx(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>340</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+            ball.dx *= -</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>1<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>(ball.xcor() &lt; -</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>340 </span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#CC7832'>and </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>ball.xcor()
+&lt; -</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>350</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>) </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>and </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>ball.ycor() &lt; paddle_a.ycor() + </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>40 </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>and </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>ball.ycor()
+&gt; paddle_a.ycor() + -</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>40</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>:<br>
+            ball.setx(-</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>340</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+            ball.dx *= -</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>1<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>score_a == </span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>10</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>:<br>
+            paddle_a.clear()<br>
+            paddle_a.goto(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>10000</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#CC7832'>, </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>10000</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+            paddle_b.clear()<br>
+            paddle_b.goto(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>10000</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#CC7832'>, </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>10000</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+            ball.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;white&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+            pen.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;white&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+            end = turtle.Turtle()<br>
+            pen.hideturtle()<br>
+            pen.penup()<br>
+            end.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;blue&quot;</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>)<br>
+            pen.hideturtle()<br>
+            pen.penup()<br>
+            end.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;blue&quot;</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>)<br>
+            end.write(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;player A wins 10 points&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>align</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;center&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>font</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=(</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;Courier&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>35</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;normal&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>))<br>
+            end.goto(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>,</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6897BB'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>)<br>
+        </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#CC7832'>if </span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A9B7C6'>score_b == </span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>10</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>:<br>
+            paddle_a.clear()<br>
+            paddle_a.goto(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>10000</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>10000</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+            paddle_b.clear()<br>
+            paddle_b.goto(</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#6897BB'>10000</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#CC7832'>,</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#6897BB'>10000</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#A9B7C6'>)<br>
+            ball.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;white&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+            pen.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;white&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A9B7C6'>)<br>
+            end = turtle.Turtle()<br>
+            pen.hideturtle()<br>
+            pen.penup()<br>
+            end.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;blue&quot;</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>)<br>
+            pen.hideturtle()<br>
+            pen.penup()<br>
+            end.color(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;blue&quot;</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A9B7C6'>)<br>
+            end.write(</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#6A8759'>&quot;player b wins 10 points&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>align</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;center&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#AA4926'>font</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>=(</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;Courier&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6897BB'>35</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#CC7832'>, </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#6A8759'>&quot;normal&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A9B7C6'>))<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
